@@ -5,7 +5,8 @@ ${_INIT_CONFIG}[_CLASS] = __NAMESPACE__.'\jsonld';
 
 class jsonld extends \PMVC\PlugIn
 {
-    public function init()
+    public function create()
     {
+        return new Root();
     }
 }

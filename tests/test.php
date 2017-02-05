@@ -17,12 +17,11 @@ class JsonldTest extends PHPUnit_Framework_TestCase
 
     function testGetRoot()
     {
-        \PMVC\plug($this->_plug);
-        $root = new Root();
+        $root = \PMVC\plug($this->_plug)->create();
         $root->setType('ItemList');
         $itemListElement = $root->add('itemListElement');
         $itemListElement->addUrl('http://tw.yahoo.com'); 
-        $expected = '<script type="application/ld+json">{"@context":"http:\/\/schema.org\/","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":0,"url":"http:\/\/tw.yahoo.com"}]}</script>';
+        $expected = '<script type="application/ld+json">{"@context":"http:\/\/schema.org\/","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"http:\/\/tw.yahoo.com"}]}</script>';
         $actual = (string)$root;
         $this->assertEquals($expected, $actual);
     }
