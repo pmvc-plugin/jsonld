@@ -6,7 +6,7 @@ class Root extends Base
     public function __tostring()
     {
         return '<script type="application/ld+json">'.
-        json_encode($this->getArr()).
+        json_encode($this->toArray()).
         '</script>';
     }
 

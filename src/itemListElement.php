@@ -4,7 +4,7 @@ namespace PMVC\PlugIn\jsonld;
 class itemListElement extends Base 
 {
     private $_i = 0;
-    public function add($url)
+    public function addUrl($url)
     {
         $o = new itemListElementItem();
         $o['url'] = $url;

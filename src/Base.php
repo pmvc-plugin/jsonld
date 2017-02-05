@@ -8,11 +8,11 @@ abstract class Base extends \PMVC\HashMap
         return $this;
     }
 
-    public function getArr()
+    public function toArray()
     {
         foreach ($this as $k=>$v) {
             if (\PMVC\isArrayAccess($v)) {
-                \PMVC\ref($this->{$k}, $v->getArr());
+                \PMVC\ref($this->{$k}, $v->toArray());
             }
             if (0!==$v && false!==$v && empty($v)) {
                 unset($this[$k]);
