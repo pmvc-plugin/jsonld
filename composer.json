@@ -1,0 +1,23 @@
+{
+    "name": "pmvc-plugin/jsonld",
+    "description": "PMVC JSON-LD generator",
+    "type": "library",
+    "homepage": "https://github.com/pmvc/pmvc",
+    "keywords": ["json-ld", "pmvc", "plug-in"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hill",
+            "email": "hill@kimo.com"
+        }
+    ],
+    "require": {
+        "pmvc/pmvc": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "PMVC\\PlugIn\\jsonld\\": "./src"
+        }
+    },
+    "minimum-stability": "dev"
+}
