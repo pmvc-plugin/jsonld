@@ -10,6 +10,9 @@ abstract class Base extends \PMVC\HashMap
 
     public function toArray()
     {
+        if (!count($this)) {
+            return [];
+        }
         foreach ($this as $k=>$v) {
             if (\PMVC\isArrayAccess($v)) {
                 \PMVC\ref($this->{$k}, $v->toArray());
