@@ -1,18 +1,21 @@
 <?php
+
 namespace PMVC\PlugIn\jsonld;
 
 class Root extends Base 
 {
     public function __tostring()
     {
-        return '<script type="application/ld+json">'.
-        json_encode($this->toArray()).
-        '</script>';
+        return
+            '<script type="application/ld+json">'.
+                json_encode($this->toArray()).
+            '</script>';
     }
 
     public function setType($type)
     {
         $this['@type'] = $type;
+        return $this;
     }
 
     public function add($key)

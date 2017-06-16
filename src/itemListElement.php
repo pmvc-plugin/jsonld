@@ -1,4 +1,8 @@
 <?php
+/**
+ * @see http://schema.org/itemListElement
+ */
+
 namespace PMVC\PlugIn\jsonld;
 
 class itemListElement extends Base 

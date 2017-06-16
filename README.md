@@ -10,6 +10,10 @@ jsonld
 ## Introduction to Structured Data by google
 https://developers.google.com/search/docs/guides/intro-structured-data
 
+## Test
+   * https://developers.google.com/search/docs/guides/prototype
+   * https://search.google.com/structured-data/testing-tool
+
 ## Install with Composer
 ### 1. Download composer
    * mkdir test_folder
