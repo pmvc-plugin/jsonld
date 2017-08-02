@@ -18,7 +18,7 @@ class Product extends Root
 
     public function setDescription($text)
     {
-        $this['description'] = strip_tags($text);
+        $this['description'] = \PMVC\plug('strip_tags')->strip($text);
     }
 
     public function setName($name)
