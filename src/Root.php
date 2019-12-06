@@ -8,7 +8,7 @@ class Root extends Base
     {
         return
             '<script type="application/ld+json">'.
-                json_encode($this->toArray()).
+                json_encode($this->toArray(), JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT).
             '</script>';
     }
 

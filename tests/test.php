@@ -21,7 +21,19 @@ class JsonldTest extends PHPUnit_Framework_TestCase
         $root->setType('ItemList');
         $itemListElement = $root->add('itemListElement');
         $itemListElement->addUrl('http://tw.yahoo.com'); 
-        $expected = '<script type="application/ld+json">{"@context":"http:\/\/schema.org\/","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"http:\/\/tw.yahoo.com"}]}</script>';
+        $expected = <<<EOF
+<script type="application/ld+json">{
+    "@context": "http:\/\/schema.org\/",
+    "@type": "ItemList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "url": "http:\/\/tw.yahoo.com"
+        }
+    ]
+}</script>
+EOF;
         $actual = (string)$root;
         $this->assertEquals($expected, $actual);
     }
