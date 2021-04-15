@@ -1,9 +1,9 @@
 <?php
 namespace PMVC\PlugIn\jsonld;
 
-use PHPUnit_Framework_TestCase;
+use PMVC\TestCase;
 
-class JsonldTest extends PHPUnit_Framework_TestCase
+class JsonldTest extends TestCase
 {
     private $_plug = 'jsonld';
     function testPlugin()
@@ -12,7 +12,7 @@ class JsonldTest extends PHPUnit_Framework_TestCase
         print_r(\PMVC\plug($this->_plug));
         $output = ob_get_contents();
         ob_end_clean();
-        $this->assertContains($this->_plug,$output);
+        $this->haveString($this->_plug,$output);
     }
 
     function testGetRoot()

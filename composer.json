@@ -15,6 +15,9 @@
         "pmvc/pmvc": "*",
         "pmvc-plugin/strip_tags": "*"
     },
+    "require-dev": {
+        "pmvc-plugin/unit": "*"
+    },
     "autoload": {
         "psr-4": {
             "PMVC\\PlugIn\\jsonld\\": "./src"
